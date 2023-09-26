@@ -1,0 +1,32 @@
+ import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+
+class FindSpecialCharactetrs {
+
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);  
+        String str;
+
+        System.out.print("\nEnter a string : ");
+        str = input.nextLine(); 
+
+        Pattern string_patterns = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);  
+        Matcher string_matcher = string_patterns.matcher(str);  
+
+        System.out.println("\n\n\t______________ OUTPUT ______________");
+        System.out.println("\nYour string is : "+str);
+
+        int count = 0;
+
+        while(string_matcher.find()) {
+            count = count + 1;
+            System.out.println("\tposition "+string_matcher.start() +": "+ str.charAt(string_matcher.start()));
+        }
+
+        System.out.println("\nThere are "+count+" special characters");
+        System.out.println("\n\t------------------------------------");
+
+    }
+}
+ 
