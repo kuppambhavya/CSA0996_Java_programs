@@ -1,0 +1,31 @@
+import java.util.Arrays;
+public class MeanMedianMode {
+    public static void main(String[] args) {
+        int[] array = {16, 18, 27, 16, 23, 21, 19};
+        double mean = Arrays.stream(array).average().orElse(0);
+        Arrays.sort(array);
+        int median;
+        if (array.length % 2 == 0) {
+            median = (array[array.length / 2] + array[array.length / 2 - 1]) / 2;
+        } else {
+            median = array[array.length / 2];
+        }
+        int mode = array[0];
+        int maxCount = 1;
+        for (int i = 1; i < array.length; i++) {
+            int count = 1;
+            while (i < array.length - 1 && array[i] == array[i + 1]) {
+                count++;
+                i++;
+            }
+
+            if (count > maxCount) {
+                maxCount = count;
+                mode = array[i];
+            }
+        }
+        System.out.println("Mean: " + mean);
+        System.out.println("Median: " + median);
+        System.out.println("Mode: " + mode);
+    }
+}
