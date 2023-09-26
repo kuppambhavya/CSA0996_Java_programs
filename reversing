@@ -1,0 +1,8 @@
+public class ReverseAlphabeticalOrder {
+    public static void main(String[] args) {
+        String word = "hello";
+        char[] characters = word.toCharArray();
+        String reversedWord = new String(characters);
+        System.out.println(reversedWord);
+    }
+}
