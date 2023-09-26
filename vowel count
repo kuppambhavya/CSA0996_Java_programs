@@ -1,0 +1,14 @@
+public class CountVowels {
+    public static void main(String[] args) {
+        String statement = "saveetha school of engineering";
+        int vowelCount = 0;
+        for (int i = 0; i < statement.length(); i++) {
+            char character = statement.charAt(i);
+            if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u') {
+                vowelCount++;
+            }
+        }
+
+        System.out.println("The number of vowels in the statement is: " + vowelCount);
+    }
+}
