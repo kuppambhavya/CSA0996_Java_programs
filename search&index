@@ -1,7 +1,7 @@
 public class FindCharacterInString {
     public static void main(String[] args) {
-        String string = "This is a string with a given character.";
-        char character = 'a';
+        String string = "i am a programmer.";
+        char character = 'p';
 
         // Initialize a variable to store the index of the character
         int index = -1;
