@@ -1,6 +1,6 @@
 public class ReverseAlphabeticalOrder {
     public static void main(String[] args) {
-        String word = "hello";
+        String word = "MOSQUE";
         char[] characters = word.toCharArray();
         String reversedWord = new String(characters);
         System.out.println(reversedWord);
